@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Códigos de Ética — Informática</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+    <h1>Códigos de Ética — Profesión: Informática</h1>
+    <p class="lead">Compare y explore los principios éticos de distintas organizaciones y normas profesionales.</p>
+</header>
+
+<main class="container">
+<section class="controls" aria-label="Controles">
+    <label for="code-select">Seleccionar código:</label>
+    <select id="code-select">
+        <!-- Opciones llenadas por JavaScript -->
+    </select>
+
+    <label for="search-input">Buscar:</label>
+    <input id="search-input" type="search" placeholder="Escriba palabra clave" />
+
+    <div class="compare-controls">
+        <button id="add-compare">Añadir al panel de comparación</button>
+        <button id="clear-compare">Limpiar comparación</button>
+    </div>
+    </section>
+
+    <section class="content-area">
+    <aside class="list-panel" aria-label="Lista de códigos">
+        <h2>Detalles del código</h2>
+        <div id="code-details" class="card">
+        <!-- Contenido rellenado por JavaScript -->
+        </div>
+    </aside>
+
+    <section class="interaction-panel" aria-label="Interacción">
+        <h2>Principios</h2>
+        <div id="principles" class="principles-grid">
+        <!-- Tarjetas de principios -->
+        </div>
+    </section>
+
+    <aside class="compare-panel" aria-label="Comparación">
+        <h2>Comparación</h2>
+        <div id="compare-area" class="compare-area">
+        <p class="muted">No hay códigos en comparación.</p>
+        </div>
+    </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <small>Diseñado para fines educativos. Personalice los textos según su institución.</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

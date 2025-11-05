@@ -1,0 +1,189 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+--bg: #0c1e42d2;
+--card: #c5cbaf;
+--accent: #1f6feb;
+--muted: #0a0a0a;
+--border: #ffffff;
+--radius: 10px;
+--gap: 16px;
+--max-width: 1200px;
+--padding: 18px;
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+color-scheme: light;
+}
+
+body{
+background: var(--bg);
+color: #0a0a0a;
+line-height: 1.45;
+padding: 28px;
+display: flex;
+justify-content: center;
+}
+
+.container{
+width: 100%;
+max-width: var(--max-width);
+background: transparent;
+}
+
+/* Header */
+.site-header{
+margin-bottom: 18px;
+text-align: center;
+}
+.site-header h1{
+font-size: 1.6rem;
+margin-bottom: 6px;
+}
+.lead{
+color: var(--muted);
+font-size: 0.95rem;
+}
+
+/* Controls */
+.controls{
+display: flex;
+gap: 10px;
+align-items: center;
+background: var(--card);
+padding: 12px;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+margin-bottom: var(--gap);
+flex-wrap: wrap;
+}
+.controls label{ font-size: 0.86rem; color: var(--muted); }
+.controls select,
+.controls input{
+padding: 8px 10px;
+border-radius: 8px;
+border: 1px solid var(--border);
+min-width: 200px;
+}
+.compare-controls { margin-left: auto; display:flex; gap:8px; }
+
+.compare-controls button{
+padding: 8px 12px;
+border-radius: 8px;
+border: none;
+background: var(--accent);
+color: white;
+cursor: pointer;
+}
+
+/* Layout panels */
+.content-area{
+display: grid;
+grid-template-columns: 300px 1fr 320px;
+gap: var(--gap);
+align-items: start;
+}
+
+/* Cards */
+.card{
+background: var(--card);
+padding: var(--padding);
+border-radius: var(--radius);
+border: 1px solid var(--border);
+box-shadow: 0 6px 18px rgba(11,18,32,0.03);
+}
+.list-panel h2, .interaction-panel h2, .compare-panel h2{
+margin-bottom: 10px;
+font-size: 1.05rem;
+}
+
+/* Principles grid */
+.principles-grid{
+display: grid;
+gap: 12px;
+}
+.principle{
+border: 1px solid var(--border);
+border-radius: 8px;
+padding: 12px;
+background: linear-gradient(180deg, rgb(180, 161, 226), rgba(250,250,252,1));
+}
+.principle h3{
+font-size: 0.98rem;
+margin-bottom: 6px;
+}
+.principle p{ color: var(--muted); font-size: 0.9rem; }
+
+/* Compare panel */
+.compare-area{
+min-height: 180px;
+display:flex;
+gap:10px;
+align-items:flex-start;
+flex-direction: column;
+}
+.compare-card{
+padding: 10px;
+border-radius: 8px;
+border: 1px dashed var(--border);
+background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+.content-area{ grid-template-columns: 1fr; }
+.compare-controls { margin-left: 0; width: 100%; justify-content: flex-start; }
+.controls select, .controls input { min-width: 140px; }
+}
+.muted { color: var(--muted); font-size: 0.9rem; }
+
+/* 🔹 ADAPTACIÓN A TELÉFONOS Y TABLETS */
+@media (max-width: 980px) {
+  body {
+    padding: 10px;
+  }
+
+  .content-area {
+    grid-template-columns: 1fr; /* los paneles se apilan */
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls select,
+  .controls input {
+    width: 100%;
+  }
+
+  .compare-controls {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .list-panel,
+  .interaction-panel,
+  .compare-panel {
+    width: 100%;
+  }
+
+  .compare-card {
+    width: 100%;
+  }
+}
+
+/* 🔹 ADAPTACIÓN EXTRA PARA TELÉFONOS PEQUEÑOS */
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .principle h3 {
+    font-size: 1rem;
+  }
+
+  .compare-controls button {
+    width: 100%;
+  }
+}
